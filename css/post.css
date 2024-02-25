@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "Cascadia Code";
+    src: url("../fonts/CascadiaCode.ttf");
+}
+@media(orientation:landscape){
+    .catalog {
+        display: block;
+    }
+
+    .content {
+        margin-left: 250px;
+    }
+}
+@media(orientation:portrait){
+    .catalog {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+.catalog {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #0f5132;
+    padding: 0 26px;
+    box-sizing: border-box;
+}
+.catalog h3 {
+    text-align: center;
+    color: white;
+    font-family: "宋体", serif;
+}
+
+.catalog ul {
+    list-style: none;
+    color: white;
+    padding-left: 0.5em;
+    border-left: 1px solid #fff3;
+}
+.catalog > ul {
+    border-left: 0;
+    padding: 0;
+}
+.catalog > ul > li {
+    padding: 5px 0 5px 10px;
+    border-radius: 5px;
+}
+.catalog > ul > li li {
+    padding: 3px 0 3px 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.catalog li {
+    margin: 5px 0;
+    /*font-family: SourceHanSerifCN-Regular, serif;*/
+    cursor: pointer;
+}
+.catalog li:hover {
+    background-color: #fff1;
+}
+
+.content {
+    padding: 0 26px;
+}
+
+#post * {
+    font-family: "宋体", serif;
+    padding-left: 0;
+}
+#post h1,
+#post h2,
+#post h3,
+#post h4,
+#post h5,
+#post h6 {
+    font-family: "宋体", serif;
+    font-weight: 400;
+}
+#post > p {
+    text-indent: 2em;
+    line-height: 32px;
+    margin-bottom: 28px;
+}
+
+#post h1 {
+    margin-top: 40px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
+}
+@keyframes hover-title {
+    0% {
+        color: #2c3034;
+    }
+    50% {
+        text-shadow: 0 0 0.5em #0f513288;
+        color: #0f5132;
+    }
+    100% {
+        color: #2c3034;
+    }
+}
+
+#post h2 {
+    margin-top: 28px;
+}
+#post p code,
+#post pre{
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow-scrolling: touch;
+    overflow: auto;
+}
+#post pre {
+    padding: 3px 16px;
+    background-color: #f3f3f3;
+    /*background-color: #2c3034;*/
+    /*color: #eeffee;*/
+}
+#post p code {
+    padding: 0 3px;
+    font-size: 14px;
+    height: 21px;
+    box-sizing: border-box;
+}
+#post code,
+#post code *{
+    font-family: "Cascadia Code", serif;
+}
+#post blockquote {
+    background-color: #fafafa;
+    margin: 0;
+    padding: 10px 10px 10px 20px;
+    border-left: 4px solid #027841;
+    color: #555;
+}
+#post ul,
+#post ol{
+    padding-left: 1em;
+}
+#post li::marker{
+    color: #027841;
+    font-weight: 800;
+}
+#post li {
+    margin: 6px 0;
+}
+#post img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+#post-title {
+    font-family: 宋体, serif;
+    text-align: center;
+    font-weight: 500;
+    margin: 100px 0;
+}
+#post-time {
+    text-align: right;
+    font-size: medium;
+    font-family: 宋体, serif;
+    font-weight: normal;
+    color: #555;
+}

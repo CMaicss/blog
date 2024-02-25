@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Maicss</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lute/lute.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+    <style>
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0f5132;
+            z-index: 99;
+        }
+        #loading h1 {
+            color: #fff;
+            text-align: center;
+            margin: 200px 0 0 0;
+            font-weight: 400;
+        }
+        #loading p {
+            color: white;
+            text-align: center;
+            font-size: 22px;
+        }
+        @keyframes loading {
+            0% {
+                /*rotate(2D旋转) scale(放大或者缩小) translate(移动) skew(翻转)*/
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .loading-icon {
+            display: inline-block;
+            animation: loading 1s linear infinite;
+            font-size: 40px;
+            color: white;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div id="loading">
+    <h1>欢迎来到我的博客</h1>
+    <p>请稍等，正在加载文章列表，可能会比较慢。</p>
+    <h1><span class="loading-icon"><i class="bi bi-arrow-clockwise"></i></span></h1>
+</div>
+<div class="main-left">
+    <h1>Maicss</h1>
+    <div class="my-links">
+        <a href="https://github.com/Maicss-chen/"><i class="bi bi-github"></i></a>
+        <a href="mailto:maicss@126.com"><i class="bi bi-envelope-paper-fill"></i></a>
+    </div>
+</div>
+<div class="main-right" >
+    <nav>
+        <a onclick="closeAboutMe()">POSTS</a>
+        <a onclick="popAboutMe()">@ME</a>
+    </nav>
+    <div id="post-list">
+
+    </div>
+</div>
+<div class="about-me">
+    <i class="bi bi-x close-about-me" onclick="closeAboutMe()"></i>
+    <div class="head-image"></div>
+    <h2>刘风琛</h2>
+    <ul>
+        <li>男</li>
+        <li>邮箱：maicss@126.com</li>
+    </ul>
+</div>
+</body>
+</html>
